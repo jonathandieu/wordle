@@ -50,7 +50,32 @@ class LetterCell: UICollectionViewCell {
    */
   func set(style: LetterCellStyle) {
     // START YOUR CODE HERE
-    // ...
+      switch style {
+      case .initial:
+          contentView.backgroundColor = UIColor.black
+          layer.borderColor = UIColor.gray.cgColor
+      case .incorrect:
+          let redValue: CGFloat = 0.23
+          let greenValue: CGFloat = 0.23
+          let blueValue: CGFloat = 0.24
+          let alphaValue: CGFloat = 1.0
+          contentView.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: alphaValue)
+          layer.borderColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: alphaValue).cgColor
+      case .correctLetterOnly:
+          let redValue: CGFloat = 0.69
+          let greenValue: CGFloat = 0.63
+          let blueValue: CGFloat = 0.30
+          let alphaValue: CGFloat = 1.0
+          contentView.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: alphaValue)
+          layer.borderColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: alphaValue).cgColor
+      case .correctLetterAndPosition:
+          let redValue: CGFloat = 0.38
+          let greenValue: CGFloat = 0.55
+          let blueValue: CGFloat = 0.33
+          let alphaValue: CGFloat = 1.0
+          contentView.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: alphaValue)
+          layer.borderColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: alphaValue).cgColor
+      }
     // END YOUR CODE HERE
   }
 }
